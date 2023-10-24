@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid task</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        /*height: 400px;*/
+        /*justify-items: stretch; */
+        /*align-items: stretch; default*/
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        "header header"
+        "maincontent sidebar"
+        "maincontent adverts"
+        "footer footer";
+
+        /*gap: 25px;*/
+        /*column-gap: 25px;*/
+        /*row-gap: 25px;*/
+      }
+
+      .item {
+        border:  1px solid gray;
+        background-color: #BADA55;
+      }
+
+      .item1 {
+        grid-area: header;
+        /*grid-column-start: ;*/
+        /*grid-column-end: ;*/
+        /*grid-column: span 2;*/
+      }
+
+      .item2 {
+        grid-area: sidebar;
+      }
+
+      .item3 {
+        grid-area: maincontent;
+      }
+
+      .item4 {
+        grid-area: adverts;
+      }
+
+      .item5 {
+      grid-area: footer;
+      }
+
+
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+  <div class="item item1">Header</div>
+  <div class="item item2">Side bar</div>
+  <div class="item item3">Main content</div>
+  <div class="item item4">Adverts</div>
+  <div class="item item5">Footer</div>
+</div>
+</body>
+
+</html>
